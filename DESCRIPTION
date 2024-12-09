@@ -19,6 +19,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-URL: https://github.com/erictong/your-package-name, https://erictong.github.io/your-package-name
+URL: https://github.com/erictong2/remice, https://erictong2.github.io/remice
 BugReports: https://github.com/EricTong2/remice/issues
-LazyData: true

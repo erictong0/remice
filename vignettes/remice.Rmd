@@ -19,7 +19,6 @@ knitr::opts_chunk$set(
 ```
 <link rel="icon" type="image/png" href="../man/figures/logo.png">
 
-<img src="../man/figures/logo.png" style="border: none;" align="right" height="138" alt="remice logo" />
 
 # Overview
 
@@ -34,31 +33,12 @@ This vignette introduces the main functions of `remice` and provides examples of
 To install the development version of `remice` from GitHub, run:
 
 ```{r, eval = FALSE}
-devtools::install_github("erictong0/remice")
+devtools::install_github("erictong2/remice")
 ```
 
 Or if you have the source code:
 ```{r, eval = TRUE}
 library(remice)
-```
----
-
-
-
-
-# Example Dataset
-
-Here’s an example dataset to demonstrate the functionality of the `remice` package:
-
-```{r example-data}
-mouse_data <- data.frame(
-  ID = 1:5,
-  `Body Weight 1` = c(20, 25, 30, 35, "forty"),  # Non-numeric value
-  `Body Weight 2` = c(21, 26, 31, 36, 41),
-  `Body Weight 3` = c(22, 28, "thirty", 38, NA),  # Mixed types
-  `Comfort Foods` = c("Pizza, Burger", "Pasta", "Burger, Salad", "Pizza", "Fries")
-)
-mouse_data
 ```
 
 ---
@@ -70,7 +50,7 @@ mouse_data
 Use `analyze_type` to check whether all values in a column match the specified type. Here, we check if `Body Weight 1` contains numeric values.
 
 ```{r analyze-type-example}
-#format_type(mouse_data, "Body Weight 1", "numeric")
+analyze_type(mouse_data, "Body Weight 1", "numeric")
 ```
 
 ---

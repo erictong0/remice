@@ -1,4 +1,18 @@
-url: https://erictong.github.io/your-package-name
+url: https://erictong2.github.io/remice
 template:
   bootstrap: 5
 
+favicon:
+  href: man/figures/logo.png
+
+navbar:
+  structure:
+    left: [home, intro, reference, articles]
+    right: [github]
+    components:
+      intro:
+        text: "Get started"
+        href: articles/intro.html
+      articles:
+        text: Articles
+        menu:
