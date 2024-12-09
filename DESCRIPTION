@@ -24,5 +24,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-URL: https://github.com/EricTong2/remice
+URL: https://github.com/erictong/your-package-name, https://erictong.github.io/your-package-name
 BugReports: https://github.com/EricTong2/remice/issues
