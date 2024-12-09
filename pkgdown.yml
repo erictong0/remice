@@ -1,0 +1,9 @@
+pandoc: 3.1.11
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles:
+  remice: remice.html
+last_built: 2024-12-09T19:01Z
+urls:
+  reference: https://erictong2.github.io/remice/reference
+  article: https://erictong2.github.io/remice/articles
