@@ -3,12 +3,7 @@ Title: Cleaning Mice Data
 Version: 0.0.0.9000
 Authors@R: 
     person("Eric", "Tong", role = c("aut", "cre"),email = "erictong@college.harvard.edu")
-Description: The `remice` package contains four functions that are all aimed to help clean and analyze datasets, especially those related to mice experiments. These functions include:
-    -analyze_type takes a column and determines if any values in that row are not of a specified type, which could cause errors for other functions
-    -table_different creates a table of strings that are uncommonly found
-    -separate_list creates a table of the most common responses, when multiple responses could exist in one row. 
-    For example, this could be used on a survey about comfort foods, where a response might be ""
-    -plot_outliers uses longitunial data and checks for any abnormally large changes in the data. The user inputs a percent change, and any points above that will be plotted. 
+Description: The remice package contains four functions that are all aimed to help clean and analyze datasets, especially those related to mice experiments.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -26,3 +21,4 @@ Suggests:
 VignetteBuilder: knitr
 URL: https://github.com/erictong/your-package-name, https://erictong.github.io/your-package-name
 BugReports: https://github.com/EricTong2/remice/issues
+LazyData: true
