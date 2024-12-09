@@ -50,7 +50,7 @@ library(remice)
 Use `analyze_type` to check whether all values in a column match the specified type. Here, we check if `Body Weight 1` contains numeric values.
 
 ```{r analyze-type-example}
-analyze_type(mouse_data, "Body Weight 1", "numeric")
+analyze_type(mouse_data_bw_dirty, "Body Weight 1", "numeric")
 ```
 
 ---
