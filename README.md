@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# remice
+# remice <a><img src="man/figures/logo.png" align="right" height="138"/></a>
 
 Have your collaborators been remiss in their data collection? Have you
 experienced characters in your numeric columns? Do rows ever get
@@ -18,6 +18,24 @@ You can install the development version of remice like so:
 ``` r
 #install_github("erictong2/remice")
 ```
+
+## Function List
+
+These are the functions included in the package:
+
+- `analyze_type()` takes a column and determines if any values in that
+  row are not of a specified type, which could cause errors for other
+  functions
+
+- `table_different()` creates a table of strings that are uncommonly
+  found
+
+- `separate_list()` creates a table of the most common responses, when
+  multiple responses could exist in one row. For example, this could be
+  used on a survey about comfort foods, where a response might be “”
+  -plot_outliers uses longitunial data and checks for any abnormally
+  large changes in the data. The user inputs a percent change, and any
+  points above that will be plotted.
 
 ## Example
 
