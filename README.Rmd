@@ -24,7 +24,7 @@ The overarching goal of the remice package is to account for remiss data.
 You can install the development version of remice like so:
 
 ```{r}
-install_github("erictong2/remice")
+#install_github("erictong2/remice")
 ```
 
 
