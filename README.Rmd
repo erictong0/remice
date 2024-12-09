@@ -13,7 +13,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# remice <a href = "https://erictong2.github.io/remice/"><img src="man/figures/logo.png" align="right" height="138"/></a>
+# remice <a href="https://erictong2.github.io/remice"><img src="man/figures/logo.svg" align="right" height="139" alt="remice website" /></a>
+
+# pkgdown <img src="man/figures/logo.svg" align="right" />
 
 Have your collaborators been remiss in their data collection? Have you experienced characters in your numeric columns? Do rows ever get incorrectly entered or swapped? Remice aims to provide a way to identify and solve those problems. 
 
@@ -24,7 +26,7 @@ The overarching goal of the remice package is to account for remiss data.
 You can install the development version of remice like so:
 
 ```{r}
-#install_github("erictong2/remice")
+install_github("erictong2/remice")
 ```
 
 ## Function List
