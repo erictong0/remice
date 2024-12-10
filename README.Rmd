@@ -17,9 +17,13 @@ knitr::opts_chunk$set(
 
 
 
-Have your collaborators been remiss in their data collection? Have you experienced characters in your numeric columns? Do rows ever get incorrectly entered or swapped? Remice aims to provide a way to identify and solve those problems. 
+Have your collaborators been remiss in their data collection? 
 
-The overarching goal of the remice package is to account for remiss data. 
+Have you experienced characters in your numeric columns? 
+
+Do rows ever get incorrectly entered or swapped? 
+
+The overarching goal of the remice package is to account for remiss data, providing a way to identify and solve those problems. 
 
 ## Installation
 
