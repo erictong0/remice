@@ -9,31 +9,15 @@
 The remice package provides tools for cleaning and analyzing datasets,
 including those derived from experiments involving mice.
 }
-\section{Online Documentation}{
-
-For a complete overview of the package, visit the \href{https://erictong2.github.io/remice}{remice documentation website}.
+\details{
+The documentation for this package is available in the package vignette.
+Run \code{vignette("intro", package = "remice")} to see the vignette.
 }
-
-\section{Functions}{
-
-\itemize{
-\item \code{\link{analyze_type}}: Analyze the entries of a column not of a specific type
-\item \code{\link{plot_outliers}}: Visualize any data points with significant change
-\item \code{\link{separate_list}}: Separate multiple entries in a single cell
-\item \code{\link{table_different}}: Create a table of any unique character values
-}
-}
-
 \seealso{
-Useful links:
-\itemize{
-  \item \url{https://github.com/erictong2/remice}
-  \item \url{https://erictong2.github.io/remice}
-  \item Report bugs at \url{https://github.com/EricTong2/remice/issues}
-}
-
+\code{\link{vignette}}
 }
 \author{
 \strong{Maintainer}: Eric Tong \email{erictong@college.harvard.edu}
 
 }
+\keyword{internal}
