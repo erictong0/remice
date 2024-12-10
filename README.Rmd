@@ -21,7 +21,7 @@ Have you experienced characters in your numeric columns?
 
 Do rows ever get incorrectly entered or swapped? 
 
-The overarching goal of the remice package is to account for remiss data, providing a way to identify and solve those problems. 
+The overarching goal of the **remice** package is to account for **remiss** data, providing a way to identify and solve those problems. 
 
 ## Installation
 
@@ -46,7 +46,13 @@ These are the functions included in the package:
 
 ## Data List
 
-* `food_data` is a list of 
+* `food_data` is a survey of 125 individuals from Mercyhurst University. There are three columns, all with 125 character entries: 
+  * `comfort_food` is a list of students' comfort foods
+  * `food_childhood` is a list of students' childhood foods
+  * `meals_dinner_friend` is a list of foods eaten when friends came over
+* `mouse_data_birth` is a dataset from 32 mice that has four columns, describing the mouse `ID`, `Sex`, `Number`, and the `Treatment` type
+* `mouse_data_bw_dirty` is a dataset from the same 32 mice that has seven columns, the first being the same `ID` as `mouse_data_birth`. The other six columns describe three dates over which the data was collected alternating between the `Body Weight` of the mouse and the `Date` of which the `Body Weight` was collected
+* `mouse_data_bw_clean` provides the same information as `mouse_data_bw_dirty` but includes cleaned data to provide examples of functions. 
 
 ## Example
 
@@ -63,5 +69,5 @@ This is an example of `plot_outliers()` using the `mouse_data_bw_clean` dataset:
 ```{r example2}
 library(remice)
 
-table_different(mouse_data_birth, "Treatment")
+table_different(mouse_data_birth, "Treatment", 5)
 ```
