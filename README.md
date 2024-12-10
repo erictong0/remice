@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# remice <a href = "https://erictong2.github.io/remice/"><img src="man/figures/logo.png" align="right" height="138"/></a>
+# remice <a href = "https://erictong2.github.io/remice/"><img src="man/figures/logo.svg" align="right" height="138"/></a>
 
 Have your collaborators been remiss in their data collection? Have you
 experienced characters in your numeric columns? Do rows ever get
