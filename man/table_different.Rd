@@ -2,8 +2,7 @@
 % Please edit documentation in R/table_different.R
 \name{table_different}
 \alias{table_different}
-\title{Analyze String Typos
-Creates a table with rows that have different values than the rest of the other rows.}
+\title{Analyze String Typos}
 \usage{
 table_different(data, col_name, frequency = 5)
 }
@@ -18,7 +17,6 @@ table_different(data, col_name, frequency = 5)
 Returns a table with a list of row numbers and strings that showed up a fewer number of times than frequency
 }
 \description{
-Analyze String Typos
 Creates a table with rows that have different values than the rest of the other rows.
 }
 \examples{

@@ -1,8 +1,5 @@
-#Check through the rows for a string dataset: see if there is some value that does not match others.
-#Output any discrepancies with row number and what the string is
-#Includes a table for frequency (anything less than 'n' times is flagged)
-
 #' Analyze String Typos
+#'
 #' Creates a table with rows that have different values than the rest of the other rows.
 #'
 #' @param data dataframe The dataframe of information

@@ -9,19 +9,18 @@ favicon:
 
 navbar:
   structure:
-    left: [home, intro, reference]
-    right: [search, github]
+    left: [home, intro, reference, functions, datasets]
+    right: [github]
   components:
     intro:
       text: "Get started"
       href: articles/remice.html
     reference:
       text: "Reference"
+      href: reference/index.html
+    functions:
+      text: "Functions"
       menu:
-        - text: "Overview"
-          href: reference/index.html
-        - text: -------
-        - text: Functions
         - text: "analyze_type()"
           href: reference/analyze_type.html
         - text: "plot_outliers()"
@@ -30,12 +29,31 @@ navbar:
           href: reference/separate_list.html
         - text: "table_different()"
           href: reference/table_different.html
+    datasets:
+      text: "Datasets"
+      menu:
+        - text: "food_data"
+          href: food_data
+        - text: "mouse_data_birth"
+          href: mouse_data_birth
+        - text: "mouse_data_bw_dirty"
+          href: mouse_data_bw_dirty
+        - text: "mouse_data_bw_clean"
+          href: mouse_data_bw_clean
+
 
 reference:
-  - title: Overview
+  - title: Functions
     desc: A high-level overview of all available functions.
     contents:
       - analyze_type
       - plot_outliers
       - separate_list
       - table_different
+  - title: Datasets
+    desc: An overview of the datasets
+    contents:
+      - food_data
+      - mouse_data_birth
+      - mouse_data_bw_dirty
+      - mouse_data_bw_clean

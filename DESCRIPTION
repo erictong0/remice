@@ -1,6 +1,6 @@
 Package: remice
-Title: Cleaning Mice Data
-Version: 0.0.0.9000
+Title: Tools for Cleaning Mice Data
+Version: 1.0
 Authors@R: 
     person("Eric", "Tong", role = c("aut", "cre"),email = "erictong@college.harvard.edu")
 Description: The remice package contains four functions that are all aimed to help clean and analyze datasets, especially those related to mice experiments.
@@ -9,7 +9,7 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5.0)
 Imports:
     gt,
     dplyr,

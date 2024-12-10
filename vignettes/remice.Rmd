@@ -22,15 +22,15 @@ knitr::opts_chunk$set(
 
 # Overview
 
-The `remice` package provides tools to help clean and analyze datasets, especially those related to mice experiments. It simplifies tasks such as type validation, identifying uncommon strings, summarizing list-like columns, and detecting outliers in longitudinal data.
+The remice package provides tools to help clean and analyze datasets, especially those related to mice experiments. It simplifies tasks such as type validation, identifying uncommon strings, summarizing list-like columns, and detecting outliers in longitudinal data.
 
-This vignette introduces the main functions of `remice` and provides examples of their usage.
+This vignette introduces the main functions of remice and provides examples of their usage.
 
 ---
 
 # Installation
 
-To install the development version of `remice` from GitHub, run:
+To install the development version of remice from GitHub, run:
 
 ```{r, eval = FALSE}
 devtools::install_github("erictong2/remice")
