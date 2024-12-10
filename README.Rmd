@@ -19,8 +19,17 @@ Have your collaborators been remiss in their data collection?
 
 Have you experienced characters in your numeric columns? 
 
+<<<<<<< HEAD
 Do rows ever get incorrectly entered or swapped? 
 
+=======
+Have your collaborators been remiss in their data collection? 
+
+Have you experienced characters in your numeric columns? 
+
+Do rows ever get incorrectly entered or swapped? 
+
+>>>>>>> 2aaf56092f985939d5dff0c4f1a6f5a6afc7bcdd
 The overarching goal of the remice package is to account for remiss data, providing a way to identify and solve those problems. 
 
 ## Installation
