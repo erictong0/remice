@@ -19,51 +19,49 @@ Have your collaborators been remiss in their data collection?
 
 Have you experienced characters in your numeric columns? 
 
-<<<<<<< HEAD
 Do rows ever get incorrectly entered or swapped? 
 
-=======
-Have your collaborators been remiss in their data collection? 
-
-Have you experienced characters in your numeric columns? 
-
-Do rows ever get incorrectly entered or swapped? 
-
->>>>>>> 2aaf56092f985939d5dff0c4f1a6f5a6afc7bcdd
 The overarching goal of the remice package is to account for remiss data, providing a way to identify and solve those problems. 
 
 ## Installation
 
 You can install the development version of remice like so:
 
-```{r}
+```{r, eval = FALSE}
 install_github("erictong2/remice")
 ```
+
+If you prefer, you can also go to the Github website (https://github.com/EricTong2/remice/) and download the package from there.
 
 ## Function List
 These are the functions included in the package: 
 
-* `analyze_type()` takes a column and determines if any values in that row are not of a specified type, which could cause errors for other functions
+* `analyze_type()` takes a column of characters and determines if any values in that row are not of a specified type. While this does not directly fix the types of the data, it creates a table to highlight areas in which the data could cause errors for other functions, allowing for those rows to be manually fixed. 
 
-* `table_different()` creates a table of strings that are uncommonly found
+* `table_different()` takes a column of characters and creates a table of strings that are uncommonly found in a dataset. This is aimed to mitigate various typos found by either entering data or from survey responses. For example, if all of the column values are "True" except for a single "Ture", it is likely for a typo to have occurred. This function does not fix any problems, but it highlights the row numbers where the data should be checked. 
 
-* `separate_list()` creates a table of the most common responses, when multiple responses could exist in one row. 
-    For example, this could be used on a survey about comfort foods, where a response might be ""
-    -plot_outliers uses longitunial data and checks for any abnormally large changes in the data. The user inputs a percent change, and any points above that will be plotted. 
+* `separate_list()` takes a column of characters and creates a table of the most common responses when multiple responses could exist in one row. For example, if two of the responses are "Apple, Banana, and Orange" and "Banana, Orange", this would output a table of "Apple: 1, Banana: 2, Orange: 2." This can be used on a survey about comfort foods, where a response might be 
+
+* `plot_outliers()` takes multiple columns of numeric data that was longitudinally collected and checks for any abnormally large changes in the data. This could be used to check for potential outliers or areas where the data was mis-input: for example, recording "11" grams instead of "21" grams. In addition, the user inputs a percent change, and any points that have a change greater than the input for any two points would be plotted in a graph. 
+
+## Data List
+
+* `food_data` is a list of 
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is an example of `separate_list()` using the Comfort Food column from `food_data`
 
-```{r example}
+```{r example1}
 library(remice)
 
-
+separate_list(food_data, "comfort_food", 5)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+This is an example of `plot_outliers()` using the `mouse_data_bw_clean` dataset:
 
-You can also embed plots, for example:
+```{r example2}
+library(remice)
 
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+table_different(mouse_data_birth, "Treatment")
+```
