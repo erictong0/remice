@@ -1,9 +1,6 @@
 url: https://erictong2.github.io/remice
 template:
   bootstrap: 5
-  includes:
-    in_header:
-      <link rel="shortcut icon" href="man/figures/logo.svg"/>
 
 favicon:
   href: man/figures/logo.svg
@@ -12,12 +9,33 @@ favicon:
 
 navbar:
   structure:
-    left: [home, intro, reference, articles]
-    right: [github]
-    components:
-      intro:
-        text: "Get started"
-        href: articles/intro.html
-      articles:
-        text: Articles
-        menu:
+    left: [home, intro, reference]
+    right: [search, github]
+  components:
+    intro:
+      text: "Get started"
+      href: articles/remice.html
+    reference:
+      text: "Reference"
+      menu:
+        - text: "Overview"
+          href: reference/index.html
+        - text: -------
+        - text: Functions
+        - text: "analyze_type()"
+          href: reference/analyze_type.html
+        - text: "plot_outliers()"
+          href: reference/plot_outliers.html
+        - text: "separate_list()"
+          href: reference/separate_list.html
+        - text: "table_different()"
+          href: reference/table_different.html
+
+reference:
+  - title: Overview
+    desc: A high-level overview of all available functions.
+    contents:
+      - analyze_type
+      - plot_outliers
+      - separate_list
+      - table_different
