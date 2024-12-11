@@ -40,7 +40,7 @@ For additional information about the functions or data sets, refer to the README
 `analyze_type` is used to check whether all values in a column (`Body Weight 1`) match the specified type (`numeric`). 
 
 ```{r analyze-type-example}
-analyze_type(mouse_data_bw_dirty, "Body Weight 1", "numeric")
+analyze_type(mouse_data_bw_dirty, "Body Weight 3", "numeric")
 ```
 
 `analyze_type` will automatically fail if the column name does not exist or if the data type inputted is inaccurate
@@ -72,7 +72,7 @@ table_different(mouse_data_bw_clean, "Body Weight 1")
 This function is not adivsed to be used on columns with a large amount of differing values, as the results will be messy.
 
 ```{r}
-table_different(food_data, "comfort_food")
+table_different(mouse_data_birth, "ID")
 ```
 
 
@@ -104,7 +104,7 @@ plot_outliers(mouse_data_bw_clean, c("Body Weight 1", "Body Weight 2", "Body Wei
 
 All of the columns must be numeric, and rows with NA values can either be ignored or give an error.
 
-```{r}
+```{r, error = TRUE}
 plot_outliers(mouse_data_bw_dirty, c("Body Weight 1", "Body Weight 2", "Body Weight 3"))
 ```
 
