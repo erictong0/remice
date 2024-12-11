@@ -27,7 +27,7 @@ library(remice)
 
 The remice package provides tools to help clean and analyze datasets, especially those related to mice experiments. 
 
-This vignette will provide more detailed examples for each of the functions, including the parameters and edge cases. 
+This vignette will provide additional examples for each of the functions. 
 
 For additional information about the functions or data sets, refer to the README file. 
 
