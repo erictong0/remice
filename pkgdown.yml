@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   remice: remice.html
-last_built: 2024-12-10T22:25Z
+last_built: 2024-12-11T00:47Z
 urls:
   reference: https://erictong2.github.io/remice/reference
   article: https://erictong2.github.io/remice/articles
