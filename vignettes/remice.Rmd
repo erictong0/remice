@@ -18,50 +18,63 @@ knitr::opts_chunk$set(
 )
 ```
 <link rel="icon" type="image/png" href="../man/figures/logo.png">
+```{r, echo = FALSE}
+library(remice)
+```
 
 
 # Overview
 
-The remice package provides tools to help clean and analyze datasets, especially those related to mice experiments. It simplifies tasks such as type validation, identifying uncommon strings, summarizing list-like columns, and detecting outliers in longitudinal data.
+The remice package provides tools to help clean and analyze datasets, especially those related to mice experiments. 
 
-This vignette introduces the main functions of remice and provides examples of their usage.
+This vignette will provide more detailed examples for each of the functions, including the parameters and edge cases. 
 
----
-
-# Installation
-
-To install the development version of remice from GitHub, run:
-
-```{r, eval = FALSE}
-devtools::install_github("erictong2/remice")
-```
-
-Or if you have the source code:
-```{r, eval = TRUE}
-library(remice)
-```
+For additional information about the functions or data sets, refer to the README file. 
 
 ---
 
-# Key Functions
+#Function Examples
 
 ## `analyze_type`
 
-Use `analyze_type` to check whether all values in a column match the specified type. Here, we check if `Body Weight 1` contains numeric values.
+`analyze_type` is used to check whether all values in a column (`Body Weight 1`) match the specified type (`numeric`). 
 
 ```{r analyze-type-example}
 analyze_type(mouse_data_bw_dirty, "Body Weight 1", "numeric")
 ```
 
+`analyze_type` will automatically fail if the column name does not exist or if the data type inputted is inaccurate
+
+```{r, error=TRUE}
+analyze_type(mouse_data_bw_dirty, "Body Weight 1", "int")
+```
+```{r, error=TRUE}
+analyze_type(mouse_data_bw_dirty, "Date", "integer")
+```
+
+Note that this will fail to find the value "13.5" if checking for character values, as 13.5 can be cast to a character. 
 ---
 
 ## `table_different`
 
-The `table_different` function identifies strings that appear less frequently in a column. Let’s analyze the `Comfort Foods` column:
+The `table_different` function identifies strings that appear less frequently in a column.
 
-```{r table-different-example}
+```{r}
 table_different(mouse_data_birth, "Treatment", frequency = 2)
 ```
+
+Note that this function is built for character values, so non-character columns will produce an error
+
+```{r, error = TRUE}
+table_different(mouse_data_bw_clean, "Body Weight 1")
+```
+
+This function is not adivsed to be used on columns with a large amount of differing values, as the results will be messy.
+
+```{r}
+table_different(food_data, "comfort_food")
+```
+
 
 ---
 
@@ -69,30 +82,31 @@ table_different(mouse_data_birth, "Treatment", frequency = 2)
 
 When multiple responses exist in one row, use `separate_list` to generate a table of the most common responses. For example:
 
-```{r separate-list-example}
+```{r}
 separate_list(food_data, "comfort_food", min_frequency = 10)
 ```
+
+Again, `separate_list` should be used on character columns, and non-character values will provide an error
+```{r, error = TRUE}
+separate_list(mouse_data_bw_clean, "Body Weight 1")
+```
+
 
 ---
 
 ## `plot_outliers`
 
-The `plot_outliers` function visualizes rows with unusually large changes based on a specified percent threshold. Here’s how to use it:
+The `plot_outliers` function visualizes rows with unusually large changes based on a specified percent threshold.
 
-```{r plot-outliers-example}
+```{r}
 plot_outliers(mouse_data_bw_clean, c("Body Weight 1", "Body Weight 2", "Body Weight 3"), threshold = 0.2)
 ```
 
----
+All of the columns must be numeric, and rows with NA values can either be ignored or give an error.
 
-# Conclusion
-
-The `remice` package simplifies data cleaning and analysis for datasets related to mice experiments. Use it to validate data types, summarize columns, identify outliers, and more.
-
-For more details, refer to the function documentation:
-
-```{r, eval = FALSE}
-?remice
+```{r}
+plot_outliers(mouse_data_bw_dirty, c("Body Weight 1", "Body Weight 2", "Body Weight 3"))
 ```
+
 
 ---
