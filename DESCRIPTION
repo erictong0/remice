@@ -1,6 +1,6 @@
 Package: remice
 Title: Tools for Cleaning Mice Data
-Version: 1.0
+Version: 1.0.1
 Authors@R: 
     person("Eric", "Tong", role = c("aut", "cre"),email = "erictong@college.harvard.edu")
 Description: The remice package contains four functions that are all aimed to help clean and analyze datasets, especially those related to mice experiments.
