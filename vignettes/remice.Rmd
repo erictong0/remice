@@ -33,7 +33,7 @@ For additional information about the functions or data sets, refer to the README
 
 ---
 
-#Function Examples
+# Function Examples
 
 ## `analyze_type`
 
@@ -53,6 +53,7 @@ analyze_type(mouse_data_bw_dirty, "Date", "integer")
 ```
 
 Note that this will fail to find the value "13.5" if checking for character values, as 13.5 can be cast to a character. 
+
 ---
 
 ## `table_different`
