@@ -33,13 +33,13 @@ navbar:
       text: "Datasets"
       menu:
         - text: "food_data"
-          href: food_data
+          href: reference/food_data.html
         - text: "mouse_data_birth"
-          href: mouse_data_birth
+          href: reference/mouse_data_birth.html
         - text: "mouse_data_bw_dirty"
-          href: mouse_data_bw_dirty
+          href: reference/mouse_data_bw_dirty.html
         - text: "mouse_data_bw_clean"
-          href: mouse_data_bw_clean
+          href: reference/mouse_data_bw_clean.html
 
 
 reference:
