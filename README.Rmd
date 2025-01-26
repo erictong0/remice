@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# remice <a href="https://erictong2.github.io/remice"><img src="man/figures/logo.svg" align="right" height="139" alt="remice website" /></a>
+# remice <a href="https://erictong0.github.io/remice"><img src="man/figures/logo.svg" align="right" height="139" alt="remice website" /></a>
 
 Have your collaborators been remiss in their data collection? 
 
